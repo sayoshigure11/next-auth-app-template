@@ -1,7 +1,17 @@
-import { supabase } from "./supabase"
+"use server"
+// import { supabase, supabase2 } from "./supabase"
+import {supabase2 } from "./supabase"
+
 
 export const getAllTodos = async () => {
-    const todos = await supabase.from("todo").select("*")
-    console.log("todos",todos)
-    return todos.data
+    // //見本
+    // const todos = await supabase.from("todo").select("*")
+    // console.log("todos",todos)
+    // return todos.data
+
+
+    ////jose
+    const supabase2Alpha = await supabase2()
+    const todos2 = await supabase2Alpha.from("todo").select("*")
+    return todos2
 }

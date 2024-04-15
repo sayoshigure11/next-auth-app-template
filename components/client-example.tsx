@@ -6,6 +6,8 @@ export default function ClientExample() {
   const { data: session, status } = useSession()
   console.log(session)
 
+  console.log(process.env.NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY)
+
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-3xl font-bold">クライアントサイドレンダリング</h1>
