@@ -12,6 +12,6 @@ export const getAllTodos = async () => {
 
     ////jose
     const supabase2Alpha = await supabase2()
-    const todos2 = await supabase2Alpha.from("todo").select("*")
+    const todos2 = await supabase2Alpha.from("users").select("*")
     return todos2
 }
